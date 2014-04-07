@@ -18,7 +18,6 @@
         android:layout_height="match_parent"
         android:paddingLeft="0dp"
         android:gravity="center_vertical"
-
         />
 
     <ImageButton
