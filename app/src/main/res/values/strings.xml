@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Carssier</string>
+    <string name="title_section1">Заказы</string>
+    <string name="title_section2">Расчеты</string>
+    <string name="title_section3">Склад</string>
+    <string name="title_section4">Персонал</string>
+    <string name="title_section5">Справочники</string>
+    <string name="title_section6">Отчеты</string>
+    <string name="title_section7">Настройки</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
