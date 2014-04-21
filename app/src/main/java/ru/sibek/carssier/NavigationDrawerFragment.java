@@ -111,6 +111,7 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section7)
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+        //здесь сделать гетВью и установить иконки
         return mDrawerListView;
     }
 
