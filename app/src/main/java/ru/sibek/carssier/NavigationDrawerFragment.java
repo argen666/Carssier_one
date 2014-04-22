@@ -22,6 +22,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
  * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
@@ -97,7 +99,7 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+       /* mDrawerListView.setAdapter(new AdapterClass<String>(
                 getActionBar().getThemedContext(),
                 R.layout.list_item,
                 R.id.text1,
@@ -109,7 +111,28 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section5),
                         getString(R.string.title_section6),
                         getString(R.string.title_section7)
-                }));
+                }));*/
+        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[7];
+
+        drawerItem[0] = new ObjectDrawerItem(R.drawable.orders, getString(R.string.title_section1),new int[]{R.drawable.wait,R.drawable.wait,R.drawable.wait});
+        drawerItem[1] = new ObjectDrawerItem(R.drawable.orders, getString(R.string.title_section2),new int[]{R.drawable.wait,R.drawable.wait});
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.orders, getString(R.string.title_section3),new int[]{R.drawable.wait,R.drawable.wait,R.drawable.wait});
+        drawerItem[3] = new ObjectDrawerItem(R.drawable.orders, getString(R.string.title_section4),new int[]{R.drawable.wait,R.drawable.wait,R.drawable.wait});
+        drawerItem[4] = new ObjectDrawerItem(R.drawable.orders, getString(R.string.title_section5),new int[]{R.drawable.wait,R.drawable.wait,R.drawable.wait});
+        drawerItem[5] = new ObjectDrawerItem(R.drawable.orders, getString(R.string.title_section6),new int[]{R.drawable.wait,R.drawable.wait,R.drawable.wait});
+        drawerItem[6] = new ObjectDrawerItem(R.drawable.orders, getString(R.string.title_section7),new int[]{R.drawable.wait,R.drawable.wait,R.drawable.wait});
+
+        /*ArrayList<String> list = new ArrayList<String>();
+        list.add(getString(R.string.title_section1));
+        list.add(getString(R.string.title_section2));
+        list.add(getString(R.string.title_section3));
+        list.add(getString(R.string.title_section4));
+        list.add(getString(R.string.title_section5));
+        list.add(getString(R.string.title_section6));
+        list.add(getString(R.string.title_section7));*/
+        AdapterClass adClass = new AdapterClass(getActionBar().getThemedContext(), drawerItem);
+
+        mDrawerListView.setAdapter(adClass);
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         //здесь сделать гетВью и установить иконки
         return mDrawerListView;

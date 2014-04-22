@@ -14,18 +14,24 @@
     <TextView
         android:id="@+id/text1"
         style="@style/CodeFont"
-        android:layout_width="160dp"
+        android:layout_width="150dp"
         android:layout_height="match_parent"
         android:paddingLeft="0dp"
         android:gravity="center_vertical"
 
         />
 
-    <ImageView
+    <LinearLayout
+        android:id="@+id/linear_layout_navitem"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></LinearLayout>
+
+    <!--<ImageView
         android:id="@+id/drawer_item_icon1"
         android:clickable="true"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:background="#fbf5f5"
         android:src="@drawable/orders" />
      <ImageView
@@ -43,7 +49,7 @@
          android:layout_height="match_parent"
          android:paddingLeft="15dp"
          android:background="#fbf5f5"
-         android:src="@drawable/wait" />
+         android:src="@drawable/wait" />-->
 
 
 </LinearLayout>
